@@ -7,6 +7,11 @@ import WorkPage from './pages/WorkPage';
 import ServicesPage from './pages/ServicesPage';
 import VisionPage from './pages/VisionPage';
 import ContactPage from './pages/ContactPage';
+import Autom8CaseStudyPage from './pages/Autom8CaseStudyPage';
+import BillzCaseStudyPage from './pages/BillzCaseStudyPage';
+import CodeaifyCaseStudyPage from './pages/CodeaifyCaseStudyPage';
+import MeterCaseStudyPage from './pages/MeterCaseStudyPage';
+import Tap2DocCaseStudyPage from './pages/Tap2DocCaseStudyPage';
 
 function ScrollReveal() {
   const location = useLocation();
@@ -47,6 +52,11 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/work" element={<WorkPage />} />
+          <Route path="/work/autom8" element={<Autom8CaseStudyPage />} />
+          <Route path="/work/billz" element={<BillzCaseStudyPage />} />
+          <Route path="/work/codeaify" element={<CodeaifyCaseStudyPage />} />
+          <Route path="/work/meter" element={<MeterCaseStudyPage />} />
+          <Route path="/work/tap2doc" element={<Tap2DocCaseStudyPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/vision" element={<VisionPage />} />
           <Route path="/contact" element={<ContactPage />} />

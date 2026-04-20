@@ -1,4 +1,5 @@
 import './Work.css';
+import { Link } from 'react-router-dom';
 
 const PROJECTS = [
   {
@@ -12,38 +13,59 @@ const PROJECTS = [
       'Automated email triage, code reviews, and package tracking',
     ],
     stack: ['LangGraph', 'Python', 'React', 'FastAPI', 'Redis', 'PostgreSQL', 'Telegram API'],
+    caseStudyPath: '/work/autom8',
   },
   {
     num: '02',
-    category: 'SaaS Platform',
-    name: 'Meridian Financial Suite',
-    desc: 'Enterprise-grade dashboard and analytics platform for a Series C fintech, processing $2.4B in annual transactions.',
-    highlights: null,
-    stack: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'D3.js'],
+    category: 'Fintech / Personal Expense Intelligence',
+    name: 'Billz',
+    desc: 'Mobile-first receipt intelligence and savings companion that helps users capture purchases, understand spending behavior, and unlock targeted offers through coupon and loyalty workflows.',
+    highlights: [
+      'Receipt capture and detailed transaction breakdown flows',
+      'Coupon and savings discovery integrated into spending journeys',
+      'Onboarding-to-profile lifecycle designed for high retention',
+    ],
+    stack: ['Product Design', 'Fintech UX', 'Mobile Flows', 'Offer Engine', 'Analytics'],
+    caseStudyPath: '/work/billz',
   },
   {
     num: '03',
-    category: 'AI / Machine Learning',
-    name: 'NovaTrak Logistics Engine',
-    desc: 'AI-powered route optimization and predictive demand platform reducing logistics costs by 34%.',
-    highlights: null,
-    stack: ['Python', 'TensorFlow', 'FastAPI', 'Redis', 'GCP'],
+    category: 'EdTech / AI Coding Enablement',
+    name: 'Codeaify',
+    desc: 'A guided coding learning and practice ecosystem designed to move users from fundamentals to production confidence through structured paths, interactive exercises, and progress-based feedback loops.',
+    highlights: [
+      'Structured multi-screen learning progression architecture',
+      'Practice-first UX to improve skill retention and completion rates',
+      'Performance tracking patterns for iterative learner growth',
+    ],
+    stack: ['Learning Experience', 'AI Guidance', 'Product Analytics', 'Gamification', 'Mobile UI'],
+    caseStudyPath: '/work/codeaify',
   },
   {
     num: '04',
-    category: 'E-Commerce & ERP',
-    name: 'Veridian Commerce Hub',
-    desc: 'B2B e-commerce platform with real-time ERP integration serving 12,000+ SKUs across three continents.',
-    highlights: null,
-    stack: ['Next.js', 'TypeScript', 'SAP', 'Stripe', 'Elasticsearch'],
+    category: 'PropTech / Utility Intelligence',
+    name: 'Meter',
+    desc: 'A utility and meter-tracking platform that centralizes readings, usage trends, and billing context to help households and operators detect anomalies and make faster cost decisions.',
+    highlights: [
+      'End-to-end meter workflow design across entry, monitoring, and review',
+      'Consumption visibility patterns for proactive usage optimization',
+      'Decision-ready dashboards tuned for recurring operational actions',
+    ],
+    stack: ['Data Visualization', 'Usage Analytics', 'Workflow UX', 'Alerts', 'Mobile Product'],
+    caseStudyPath: '/work/meter',
   },
   {
     num: '05',
-    category: 'Data Infrastructure',
-    name: 'PulseStream Analytics',
-    desc: 'Real-time analytics engine ingesting 2M+ events/sec with sub-second query latency for enterprise clients.',
-    highlights: null,
-    stack: ['Kafka', 'ClickHouse', 'Rust', 'Kubernetes', 'Grafana'],
+    category: 'HealthTech / Patient Access Automation',
+    name: 'Tap2Doc',
+    desc: 'A digital care access platform that connects patients to providers, appointments, facilities, and assessment flows in one guided experience, reducing friction from discovery to consultation.',
+    highlights: [
+      'Physician and facility discovery with guided health assessments',
+      'Appointment-centric journey design for improved booking completion',
+      'Trust-building provider profiles and care navigation flows',
+    ],
+    stack: ['Healthcare UX', 'Care Navigation', 'Scheduling Flows', 'Patient Journey', 'Mobile Design'],
+    caseStudyPath: '/work/tap2doc',
   },
 ];
 
@@ -70,7 +92,9 @@ function ProjectCard({ project, className }) {
             <span key={t} className="work-pill">{t}</span>
           ))}
         </div>
-        <a href="#" className="work-card-link">View Case Study {'\u2192'}</a>
+        {project.caseStudyPath && (
+          <Link to={project.caseStudyPath} className="work-card-link">View Case Study {'\u2192'}</Link>
+        )}
       </div>
     </div>
   );
