@@ -1,0 +1,45 @@
+.page-header {
+  position: relative;
+  padding-top: calc(var(--nav-height) + 80px);
+  padding-bottom: 80px;
+  background: var(--ink);
+  overflow: hidden;
+  border-bottom: 1px solid var(--gold-border);
+}
+
+.page-header--compact {
+  padding-bottom: 60px;
+}
+
+.page-header-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: -20%;
+  right: -10%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.05), transparent 70%);
+  pointer-events: none;
+}
+
+.page-header-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.page-header-title {
+  margin-bottom: 20px;
+}
+
+.page-header-sub {
+  max-width: 520px;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding-top: calc(var(--nav-height) + 48px);
+    padding-bottom: 48px;
+  }
+}

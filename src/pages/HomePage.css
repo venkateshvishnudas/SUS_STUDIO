@@ -1,0 +1,106 @@
+/* Highlights */
+.home-highlights {
+  background: var(--ink-2);
+}
+
+.home-highlights-heading {
+  margin-bottom: 64px;
+}
+
+.home-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--gold-border);
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+}
+
+.home-highlight-card {
+  position: relative;
+  background: var(--ink-3);
+  padding: 48px 36px;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.home-highlight-card:hover {
+  transform: translateY(-2px);
+}
+
+.home-highlight-num {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--gold);
+  opacity: 0.4;
+  letter-spacing: 0.1em;
+}
+
+.home-highlight-icon {
+  display: block;
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 24px;
+  line-height: 1;
+}
+
+.home-highlight-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--ivory);
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.home-highlight-card p {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--ivory-dim);
+}
+
+/* CTA Band */
+.home-cta-band {
+  background: var(--ink);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.home-cta-glow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.06), transparent 65%);
+  pointer-events: none;
+}
+
+.home-cta-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.home-cta-inner h2 {
+  margin-bottom: 40px;
+}
+
+.home-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .home-highlights-grid {
+    grid-template-columns: 1fr;
+  }
+}

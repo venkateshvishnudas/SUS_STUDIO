@@ -1,0 +1,355 @@
+#vision {
+  background: var(--ink);
+  padding: 0;
+}
+
+/* ── Philosophy block ────────────────────────── */
+.vision-container {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 120px 48px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.vision-emblem {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.vision-frame {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.vision-frame-glow {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.1), transparent 70%);
+  pointer-events: none;
+}
+
+/* Decorative corner lines */
+.vision-frame-lines span {
+  position: absolute;
+  background: var(--gold);
+  opacity: 0.15;
+}
+
+.vision-frame-lines span:nth-child(1) {
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 1px;
+}
+
+.vision-frame-lines span:nth-child(2) {
+  top: 20px;
+  left: 20px;
+  width: 1px;
+  height: 40px;
+}
+
+.vision-frame-lines span:nth-child(3) {
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 1px;
+}
+
+.vision-frame-lines span:nth-child(4) {
+  bottom: 20px;
+  right: 20px;
+  width: 1px;
+  height: 40px;
+}
+
+.vision-initials {
+  font-family: var(--font-display);
+  font-size: 7rem;
+  font-weight: 300;
+  color: var(--gold);
+  opacity: 0.18;
+  letter-spacing: 0.15em;
+  position: relative;
+  z-index: 1;
+}
+
+.vision-est {
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--ink);
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+}
+
+.vision-text {
+  flex: 1;
+}
+
+.vision-heading {
+  margin-bottom: 28px;
+}
+
+.vision-para {
+  margin-bottom: 18px;
+  max-width: 540px;
+}
+
+.vision-commitments {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 36px;
+  padding-top: 32px;
+  border-top: 1px solid var(--gold-border);
+}
+
+.vision-commitment {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: var(--ivory);
+  font-weight: 400;
+}
+
+.vision-commitment-icon {
+  color: var(--gold);
+  font-size: 0.55rem;
+  flex-shrink: 0;
+}
+
+/* ── Metrics band ────────────────────────────── */
+.vision-metrics {
+  background: var(--ink-2);
+  border-top: 1px solid var(--gold-border);
+  border-bottom: 1px solid var(--gold-border);
+  padding: 60px 0;
+}
+
+.vision-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--gold-border);
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+}
+
+.vision-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 40px 24px;
+  background: var(--ink-3);
+  text-align: center;
+}
+
+.vision-metric-value {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.vision-metric-label {
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ivory-dim);
+}
+
+/* ── Principles ──────────────────────────────── */
+.vision-principles {
+  padding: 120px 0;
+}
+
+.vision-principles-heading {
+  margin-bottom: 64px;
+}
+
+.vision-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--gold-border);
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+}
+
+.vision-principle-card {
+  background: var(--ink-3);
+  padding: 48px 36px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+}
+
+.vision-principle-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top left, var(--gold-dim), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.vision-principle-card:hover {
+  transform: translateY(-2px);
+}
+
+.vision-principle-card:hover::before {
+  opacity: 1;
+}
+
+.vision-principle-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.vision-principle-icon {
+  font-size: 1.6rem;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.vision-principle-num {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 500;
+  color: var(--gold);
+  opacity: 0.4;
+  letter-spacing: 0.1em;
+}
+
+.vision-principle-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--ivory);
+  margin-bottom: 14px;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+}
+
+.vision-principle-desc {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--ivory-dim);
+  position: relative;
+  z-index: 1;
+}
+
+/* ── CTA ─────────────────────────────────────── */
+.vision-cta {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 0;
+  background: var(--ink-2);
+  border-top: 1px solid var(--gold-border);
+  text-align: center;
+}
+
+.vision-cta-glow {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.06), transparent 65%);
+  pointer-events: none;
+}
+
+.vision-cta-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.vision-cta-symbol {
+  font-size: 1.2rem;
+  color: var(--gold);
+  margin-bottom: 28px;
+  opacity: 0.5;
+}
+
+.vision-cta-inner h2 {
+  margin-bottom: 20px;
+}
+
+.vision-cta-sub {
+  max-width: 460px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 900px) {
+  .vision-container {
+    flex-direction: column;
+    gap: 48px;
+    align-items: flex-start;
+    padding: 80px 24px;
+  }
+
+  .vision-frame {
+    width: 260px;
+    height: 260px;
+  }
+
+  .vision-initials {
+    font-size: 5rem;
+  }
+
+  .vision-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .vision-principles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vision-principles {
+    padding: 80px 0;
+  }
+
+  .vision-cta {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .vision-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
