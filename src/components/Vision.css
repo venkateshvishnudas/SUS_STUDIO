@@ -6,11 +6,13 @@
 /* ── Philosophy block ────────────────────────── */
 .vision-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 80px;
-  padding: 120px 48px;
+  gap: 40px;
+  padding: 80px 48px 60px;
   max-width: 1280px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .vision-emblem {
@@ -112,6 +114,8 @@
 .vision-para {
   margin-bottom: 18px;
   max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .vision-commitments {
@@ -183,7 +187,7 @@
 
 /* ── Principles ──────────────────────────────── */
 .vision-principles {
-  padding: 120px 0;
+  padding: 60px 0 120px;
 }
 
 .vision-principles-heading {
@@ -316,23 +320,8 @@
 /* ── Responsive ──────────────────────────────── */
 @media (max-width: 900px) {
   .vision-container {
-    flex-direction: column;
     gap: 48px;
-    align-items: flex-start;
     padding: 80px 24px;
-  }
-
-  .vision-frame {
-    width: 260px;
-    height: 260px;
-  }
-
-  .vision-initials {
-    font-size: 5rem;
-  }
-
-  .vision-metrics-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .vision-principles-grid {

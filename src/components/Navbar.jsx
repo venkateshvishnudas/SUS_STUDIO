@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
 
 const NAV_LINKS = [
+  { to: '/', label: 'Home' },
   { to: '/work', label: 'Work' },
   { to: '/services', label: 'Services' },
   { to: '/vision', label: 'Vision' },

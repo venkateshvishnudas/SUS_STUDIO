@@ -32,20 +32,6 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-stats reveal">
-          <div className="hero-stat">
-            <span className="hero-stat-num">127+</span>
-            <span className="hero-stat-label">Projects Shipped</span>
-          </div>
-          <div className="hero-stat">
-            <span className="hero-stat-num">12</span>
-            <span className="hero-stat-label">Years of Excellence</span>
-          </div>
-          <div className="hero-stat">
-            <span className="hero-stat-num">96%</span>
-            <span className="hero-stat-label">Client Retention Rate</span>
-          </div>
-        </div>
       </div>
     </section>
   );

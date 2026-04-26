@@ -4,7 +4,6 @@ import './Contact.css';
 const INFO = [
   { icon: '\u2726', label: 'contactus.suss@gmail.com' },
   { icon: '\u2726', label: 'Response within 24 hours' },
-  { icon: '\u2726', label: 'Project minimum: $50,000' },
 ];
 
 const PROJECT_TYPES = [
@@ -20,10 +19,11 @@ const PROJECT_TYPES = [
 
 const BUDGETS = [
   'Select budget range',
-  '$50,000 - $100,000',
-  '$100,000 - $250,000',
-  '$250,000 - $500,000',
-  '$500,000+',
+  '< ₹50,000',
+  '₹50,000 - ₹1,00,000',
+  '₹1,00,000 - ₹2,50,000',
+  '₹2,50,000 - ₹5,00,000',
+  '₹5,00,000+',
 ];
 
 export default function Contact() {

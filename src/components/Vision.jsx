@@ -1,13 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Vision.css';
 
-const COMMITMENTS = [
-  'Senior engineers on every project, no juniors',
-  'Outcome-based delivery, not hourly billing',
-  'Post-launch performance SLA guarantee',
-  'Full IP transfer on project completion',
-];
-
 const PRINCIPLES = [
   {
     num: '01',
@@ -29,29 +22,11 @@ const PRINCIPLES = [
   },
 ];
 
-const METRICS = [
-  { value: '96%', label: 'Client Retention' },
-  { value: '4.2x', label: 'Avg. ROI Delivered' },
-  { value: '99.9%', label: 'Uptime SLA Record' },
-  { value: '< 24h', label: 'Avg. Response Time' },
-];
-
 export default function Vision() {
   return (
     <section id="vision">
       {/* Philosophy block */}
       <div className="container vision-container">
-        <div className="vision-emblem reveal">
-          <div className="vision-frame">
-            <div className="vision-frame-glow" />
-            <div className="vision-frame-lines">
-              <span /><span /><span /><span />
-            </div>
-            <span className="vision-initials">SS</span>
-          </div>
-          <span className="vision-est">Est. 2014</span>
-        </div>
-
         <div className="vision-text">
           <div className="section-label reveal">Our Vision</div>
           <h2 className="vision-heading reveal">
@@ -72,28 +47,6 @@ export default function Vision() {
             of exceptional businesses.
           </p>
 
-          <div className="vision-commitments">
-            {COMMITMENTS.map((f, i) => (
-              <div className="vision-commitment reveal" key={i}>
-                <span className="vision-commitment-icon">{'\u2726'}</span>
-                <span>{f}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Metrics band */}
-      <div className="vision-metrics">
-        <div className="container">
-          <div className="vision-metrics-grid">
-            {METRICS.map((m, i) => (
-              <div className="vision-metric reveal" key={i}>
-                <span className="vision-metric-value">{m.value}</span>
-                <span className="vision-metric-label">{m.label}</span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 

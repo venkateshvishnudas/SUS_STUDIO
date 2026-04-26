@@ -43,19 +43,6 @@ const PROJECTS = [
   },
   {
     num: '04',
-    category: 'PropTech / Utility Intelligence',
-    name: 'Meter',
-    desc: 'A utility and meter-tracking platform that centralizes readings, usage trends, and billing context to help households and operators detect anomalies and make faster cost decisions.',
-    highlights: [
-      'End-to-end meter workflow design across entry, monitoring, and review',
-      'Consumption visibility patterns for proactive usage optimization',
-      'Decision-ready dashboards tuned for recurring operational actions',
-    ],
-    stack: ['Data Visualization', 'Usage Analytics', 'Workflow UX', 'Alerts', 'Mobile Product'],
-    caseStudyPath: '/work/meter',
-  },
-  {
-    num: '05',
     category: 'HealthTech / Patient Access Automation',
     name: 'Tap2Doc',
     desc: 'A digital care access platform that connects patients to providers, appointments, facilities, and assessment flows in one guided experience, reducing friction from discovery to consultation.',
@@ -104,12 +91,6 @@ export default function Work() {
   return (
     <section id="work">
       <div className="container">
-        <div className="section-label reveal">Selected Work</div>
-        <h2 className="work-heading reveal">
-          Projects That Define<br />
-          Industry Standards
-        </h2>
-
         <div className="work-grid">
           {/* Project 1 (Autom8): Full width flagship */}
           <ProjectCard project={PROJECTS[0]} className="work-card--full" />
@@ -121,16 +102,8 @@ export default function Work() {
             ))}
           </div>
 
-          {/* Projects 4-5: 60/40 split */}
-          <div className="work-row work-row--split">
-            {PROJECTS.slice(3, 5).map((p, i) => (
-              <ProjectCard
-                key={p.num}
-                project={p}
-                className={i === 0 ? 'work-card--wide' : 'work-card--narrow'}
-              />
-            ))}
-          </div>
+          {/* Project 4 (Tap2Doc): Full width */}
+          <ProjectCard project={PROJECTS[3]} className="work-card--full" />
         </div>
       </div>
     </section>
